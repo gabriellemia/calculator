@@ -54,7 +54,7 @@ function chooseOperation(operation) {
     }
 }
 
-function extendCalc (text) {
+function extendCalc(text) {
     operator = text;
     previousDisplay.textContent = previousNum + " " + operator;
     currentDisplay.textContent = "0";
@@ -62,9 +62,9 @@ function extendCalc (text) {
 }
 
 function chooseNumber(number) {
-    if (previousNum != "" && currentNum !== "" && operator === "") {
+    if (previousNum != "" && currentNum != "" && operator === "") {
         previousNum = "";
-        currentDisplay .textContent = currentNum;
+        currentDisplay.textContent = currentNum;
     }
     if (currentNum.length <= 15) {
     currentNum += number;
@@ -110,7 +110,7 @@ function calculate() {
     setDisplay();
 }
 
-function rounding (num) {
+function rounding(num) {
     return Math.round(num * 100000) / 100000
 }
 
@@ -125,7 +125,7 @@ function setDisplay() {
     currentNum = "";
 }
 
-function decimalPlace () {
+function decimalPlace() {
     if (!currentNum.includes (".")) {
         currentNum += ".";
         currentDisplay.textContent = currentNum;
